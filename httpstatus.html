@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <script>
+        (async function main() {
+            try {
+                let req = await fetch('https://httpstat.us/200');
+                text = await req.text();
+            } catch (e) {
+                text = e.message;
+            }
+            let p = document.createElement('p');
+            p.id = 'result';
+            p.textContent = text;
+            document.querySelector('div').appendChild(p);
+        })();
+    </script>
+</head>
+
+<body>
+    <div>Test</div>
+</body>
+
+</html>
