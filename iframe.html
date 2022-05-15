@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script>
+        let asc = true;
+        setInterval(() => {
+            let a = document.getElementById('a');
+            let b = document.getElementById('b');
+            let body = document.querySelector('body');
+            body.removeChild(a);
+            body.removeChild(b);
+            asc = !asc;
+            let els = [a, b];
+            if (!asc)
+                els = els.reverse();
+            els.forEach(el => body.appendChild(el));
+        }, 500);
+    </script>
+</head>
+
+<body>
+    <div id="a">A</div>
+    <div id="b">B</div>
+</body>
+
+</html>
